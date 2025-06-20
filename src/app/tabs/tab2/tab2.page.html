@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="produto">
+  <ion-card>
+    <img 
+      [src]="produto.image" 
+      alt="Imagem do produto" 
+      style="display: block; margin: 24px auto 16px auto; max-width: 250px; max-height: 250px; border-radius: 12px; box-shadow: 0 2px 8px #0002;">
+    <ion-card-header>
+  <ion-card-title style="font-size: 1.3em; font-weight: bold;">{{ produto.title }}</ion-card-title>
+  <ion-card-subtitle style="color: #888;">Categoria: {{ produto.category }}</ion-card-subtitle>
+</ion-card-header>
+<ion-card-content>
+  <p style="margin-bottom: 8px;">{{ produto.description }}</p>
+  <span class="preco-produto">Preço: R$ {{ produto.price }}</span>
+</ion-card-content>
+  </ion-card>
+</ion-content>
